@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Get To Know Alpine.js!</title>
+
+		<link rel="stylesheet" href="./Reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="./Reveal.js/css/theme/moon.css" id="theme">
+		<style>
+			.reveal
+			{
+				color: #ddd;
+			}
+
+			.reveal h2
+			{ 
+				text-transform: none; 
+				font-size: 60px;
+			}
+
+			.reveal ul li, .reveal p
+			{
+				font-size: 34px;
+				text-align: left;
+			}
+
+			.highlight 
+			{ 
+				color: green 
+			}
+
+			.code
+			{
+				font-family: "Courier";
+				color: green;
+			}
+
+			.reveal p.centered
+			{
+				text-align: center;
+			}
+
+			.reveal ul.remove-dot
+			{
+				list-style-type: none;
+			}
+		</style>		
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Get To Know Alpine.js!</h2>
+					<p class="centered">Nolan Erck</p>
+					<p class="centered">South of Shasta</p>
+				</section>
+
+				<section>
+					<h2>About Me</h2>
+					<ul>
+						<li>Owner / Director, South of Shasta</li>
+						<li>Manager, Sac Interactive Tech Meetup</li>
+						<li>Reformed Video Game Developer - Grim Fandango, SimPark, StarWars Rogue Squadron, etc...</li>
+						<li>Music Junkie</li>
+					</ul>
+				</section>
+
+				<section data-background-image="./images/record-collection.jpg">
+				</section>
+
+				<section data-background-image="./images/charlie_brown.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<h2>Code And Slides</h2>
+					<p class="centered">github.com/nolanerck</p>
+					<p class="centered">get-to-know-alpine-js</p>
+				</section>
+
+				<section>
+					<h2>Alpine.js</h2>
+
+					<ul>
+						<li>"jQuery for the Modern Web"</li>
+						<li>Similar to Vue.js</li>
+						<li>No build step required</li>
+						<li>Node / npm install not required</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Alpine.js</h2>
+
+					<ul>
+						<li>Very lightweight and simple, by design</li>
+						<li>1 JS file</li>
+						<li>15 attributes, 6 properties, 2 methods</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Alpine.js vs jQuery vs Vue</h2>
+
+					<ul>
+						<li>jQuery: manipulate the entire DOM.</li>
+						<li>Alpine: designate a portion of the DOM to be managed by Alpine.
+							<br>
+							Similar-ish to Vue.js
+						</li>
+						<li>Template syntax also similar to Vue</li>
+						<li><a href="../demos/1_helloWorld.html">Demo 1: Hello World</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Other Resources</h2>
+					<ul>
+						<li>Raymond Camden's Blog</li>
+						<li><a href="https://alpinejs.dev/">alpinejs.dev</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Learning in 30 minutes a day.</h2>
+				</section>
+
+				<section>
+					<h2>Questions? Comments?</h2>
+					<ul>
+						<li>southofshasta.com</li>
+						<li>nolan@southofshasta.com</li>
+						<li>Twitter: @southofshasta @nolanerck</li>
+						<li>Github: nolanerck</li>
+					</ul>
+					<p class="centered">Thanks!</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../Reveal.js/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize();
+
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../Reveal.js/css/print/pdf.css' : '../Reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );			
+		</script>
+
+		<!-- <script defer src="./fontawesome/on-server/js/fontawesome-all.js"></script> -->
+
+	</body>
+</html>

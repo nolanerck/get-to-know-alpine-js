@@ -1,0 +1,12 @@
+{
+    "web":{
+        "webroot":".",
+        "http":{
+            "port":"8989"
+        }
+    },
+    "openbrowser":"false",
+    "app":{
+        "cfengine":"Adobe@2023.0.4+330500"
+    }
+}
