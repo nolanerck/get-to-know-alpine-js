@@ -97,8 +97,8 @@
 						<li>Very lightweight and simple, by design</li>
 						<li>1 JS file</li>
 						<li>15 attributes, 6 properties, 2 methods</li>
-						<li>Not for full-blown SPA apps</li>
-						<li>Better for specific bits of interactivity within larger projects</li>
+						<li>Alpine <em>components</em>, not apps</li>
+						<li>For specific bits of interactivity on the page</li>
 						<li>If you need sitename.com/#routes, use Vue, React, etc</li>
 					</ul>
 				</section>
@@ -107,11 +107,8 @@
 					<h2>Alpine.js vs jQuery vs Vue</h2>
 
 					<ul>
-						<li>jQuery: manipulate the entire DOM.</li>
-						<li>Alpine: designate a portion of the DOM to be managed by Alpine.
-							<br>
-							Similar-ish to Vue.js
-						</li>
+						<li>jQuery: manipulate the entire DOM</li>
+						<li>Alpine: designate a portion of the DOM to be managed (similar-ish to Vue)</li>
 						<li>Template syntax also similar to Vue</li>
 						<li><a href="../demos/1_helloWorld.html">Demo 1: Hello World</a></li>
 					</ul>
@@ -121,12 +118,12 @@
 					<h2>x-data</h2>
 
 					<ul>
-						<li>Where all your Alpine stuff lives.</li>
+						<li>Where all your Alpine stuff lives</li>
 						<li>Define variables</li>
 						<li>Event handlers</li>
 						<li>Listen for Alpine init</li>
 						<li>Define methods</li>
-						<li><em>Everything</em> that makes up an Alpine app can go in here</li>
+						<li><em>Everything</em> that makes up an Alpine component can go in here</li>
 						<li>Similar to new Vue( {} );</li>
 					</ul>
 				</section>
@@ -157,6 +154,7 @@
 						<li>Shorthand, just use ":" without x-bind
 							<br>&lt;img :src="myVariableName"&gt;
 						</li>
+						<li>I don't like the shorthand syntax</li>
 						<li><a href="../demos/3_attributeBinding.html">Demo 3: Attribute Binding</a></li>
 					</ul>
 				</section>
@@ -189,10 +187,8 @@
 
 					<ul>
 						<li>Can use modifiers to (duh) modify how data is handled</li>
-						<li>By default JavaScript (x-model) treats form data like a string
-							<br>
-							.number and .boolean for better numeric and bool data functionality
-						</li>
+						<li>By default JavaScript (x-model) treats form data like a string</li>
+						<li>.number and .boolean for better numeric and bool data functionality</li>
 						<li>debounce<br>
 							&lt;input type="text" x-model.debounce.500ms="search"&gt;
 						</li>
@@ -251,12 +247,66 @@
 				</section>
 
 				<section>
-					<h2>Other Resources</h2>
+					<h2>Multiple Alpine Components</h2>
+
+					<ul>
+						<li>Each x-data is a "component"</li>
+						<li>x-data's cannot talk to each other directly</li>
+						<li>Tho you can dispatch messages ala vanilla JS</li>
+						<li>https://alpinejs.dev/magics/dispatch</li>
+						<li>Use Alpine.store() for global state management</li>
+						<!-- <li><a href="../demos/11_state_mgmt/index.html">Demo 11: State Management</a></li> -->
+					</ul>
+				</section>
+
+				<section>
+					<h2>Other stuff</h2>
+				</section>
+
+				<section>
+					<h2>Transitions</h2>
+
+					<ul>
+						<li>x-transition</li>
+						<li>For CSS transition animation things</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Magics</h2>
+
+					<ul>
+						<li>$magicsLookLikeThis</li>
+						<li>$watch - Watch a component property to see when it changes and run some code</li>
+						<li>init( $watch( 'firstName', value => console.log(value)) );</li>
+						<li>$dispatch - shortcut for dispatching browser events</li>
+						<li>
+							&lt;button @click="$dispatch('notify', { message: 'Hello World!' })"&gt;
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Even more cool stuff!</h2>
+
+					<ul>
+						<li>Alpine.store()</li>
+						<li>Other Magics (el, refs, store, nextTick, root, data, id)</li>
+						<li>Plugins</li>
+						<li>Advanced things like CSP, Reactivity, Extending, Async</li>
+						<li>Plus more!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>More Resources</h2>
 					<ul>
 						<li>Raymond Camden's Blog</li>
 						<li><a href="https://alpinejs.dev/">alpinejs.dev</a></li>
+						<li><a href="https://alpinejs.dev/components">alpinejs.dev/components</a></li>
+						<li>Official(?) Discord</li>
 						<li>Twitter: @Alpine_JS</li>
-						<li></li>
+						<li>southofshasta.com/training/alpine-js-crash-course/</li>
 					</ul>
 				</section>
 
