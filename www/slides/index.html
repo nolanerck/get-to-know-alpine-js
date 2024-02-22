@@ -97,6 +97,9 @@
 						<li>Very lightweight and simple, by design</li>
 						<li>1 JS file</li>
 						<li>15 attributes, 6 properties, 2 methods</li>
+						<li>Not for full-blown SPA apps</li>
+						<li>Better for specific bits of interactivity within larger projects</li>
+						<li>If you need sitename.com/#routes, use Vue, React, etc</li>
 					</ul>
 				</section>
 
@@ -178,6 +181,39 @@
 						<li>Works on all form fields except type=file (for security reasons)</li>
 						<li>2-way binding ala MVVM</li>
 						<li><a href="../demos/6_formBinding.html">Demo 6: Form Model Binding</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Modifiers</h2>
+
+					<ul>
+						<li>Can use modifiers to (duh) modify how data is handled</li>
+						<li>By default JavaScript (x-model) treats form data like a string
+							<br>
+							.number and .boolean for better numeric and bool data functionality
+						</li>
+						<li>debounce<br>
+							&lt;input type="text" x-model.debounce.500ms="search"&gt;
+						</li>
+						<li>throttle
+							<br>
+							&lt;input type="text" x-model.throttle.500ms="search"&gt;
+						</li>
+						<li><a href="../demos/7_formBindingWithModifiers.html">Demo 7: Form Binding w/ Modifiers</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Getters</h2>
+
+					<ul>
+						<li>For methods that return data based on some other state</li>
+						<li>If the method uses any data, Alpine will notice if the data changes</li>
+						<li>ala "Computed Properties" in Vue (but not cached)</li>
+						<li>get fullName(){ ... }</li>
+						<li>"get" not req'd, but adds to self-documenting</li>
+						<li><a href="../demos/8_getters.html">Demo 8: Getters</a></li>
 					</ul>
 				</section>
 
