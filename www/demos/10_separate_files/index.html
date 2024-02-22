@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separate Files</title>
+    <link rel="stylesheet" href="myStyles.css" />
+</head>
+<body>
+    <div x-data="theApp" x-cloak>
+
+        <h1>Green Day</h1>
+
+        <div x-show="guitar.length">
+            Guitars: <span x-text="guitar"></span>
+        </div>
+        <div x-show="vocals.length">
+            Vocals: <span x-text="vocals"></span>
+        </div>
+        <div x-show="bass.length">
+            Bass: <span x-text="bass"></span>
+        </div>
+        <div x-show="drums.length">
+            Drums: <span x-text="drums"></span>
+        </div>
+
+        <div>
+            <label for="guitarPlayer">Guitarist: </label>
+            <input type="text" name="guitarPlayer" x-model="guitar">
+        </div>
+        <div>
+            <label for="theVocallist">Vocals: </label>
+            <input type="text" name="theVocallist" x-model="vocals">
+        </div>
+        <div>
+            <label for="bassPlayer">Bass: </label>
+            <input type="text" name="bassPlayer" x-model="bass">
+        </div>
+        <div>
+            <label for="theDrummer">Drums: </label>
+            <input type="text" name="theDrummer" x-model="drums">
+        </div>
+
+    </div>
+
+    <script src="/js/alpinejs.3.13.5-min.js" defer></script>
+    <script src="app.js"></script>
+</body>
+</html>
