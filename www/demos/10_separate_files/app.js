@@ -3,7 +3,12 @@ document.addEventListener( 'alpine:init', () => {
         guitar: 'Jason White',
         vocals: 'Billie Joe Armstrong',
         bass: 'Mike Dirnt',
-        drums: 'Tre Cool'
+        drums: 'Tre Cool',
+
+        get allBandMembers()
+        {
+            return this.guitar + ' ' + this.vocals + ' ' + this.bass + ' ' + this.drums;
+        }
     }
     ));
 });

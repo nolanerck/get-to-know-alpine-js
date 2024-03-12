@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attribute Binding</title>
+    <style>
+        img
+        {
+            height: 400px;
+            width: 400px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
-    <div x-data="{ slideImageURL1: '../slides/images/charlie_brown.png',
-                   slideImageURL2: '../slides/images/record-collection.jpg',
+    <div x-data="{ slideImageURL1: './images/billie-joe.jpg',
+                   slideImageURL2: './images/bobby-adams.jpg',
+                   slideImageURL3: './images/larry.jpg'
                  }">
 
         <img x-bind:src="slideImageURL1" />

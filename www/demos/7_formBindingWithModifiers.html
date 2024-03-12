@@ -8,7 +8,7 @@
 <body>
     <div x-data="{ 
                     userName: 'John Lennon',
-                    age: '64',
+                    age: 64,
                     instrument: 'guitar',
                     isWalrus: false
                  }">
@@ -22,7 +22,7 @@
             <span x-show="isWalrus != true"><br>I am NOT the walrus</span>
         </div>
         <div>
-            Age: <input x-model="age">
+            Age: <input type="text" name="age" x-model="age">
         </div>
         <div>
             Instrument: <span x-text="instrument"></span>
