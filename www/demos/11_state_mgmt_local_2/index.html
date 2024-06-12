@@ -7,22 +7,13 @@
     <link rel="stylesheet" href="myStyles.css" />
 </head>
 <body>
-    <div x-data="{
-        guitar: 'Jason White',
-        vocals: 'Billie Joe Armstrong',
-        bass: 'Mike Dirnt',
-        drums: 'Tre Cool'
-    }">
+    <div x-data="parentApp">
         <div>Guitar: <span x-text="guitar"></span></div>
         <div>Vocals: <span x-text="vocals"></span></div>
         <div>Bass: <span x-text="bass"></span></div>
         <div>Drums: <span x-text="drums"></span></div>
 
-        <div x-data="{
-            bandname: 'Green Day',
-            yearFormed: '1989',
-            homeTown: 'Berkeley, CA'
-        }">
+        <div x-data="childApp">
 
             <h1>Band Details</h1>
             <div>
@@ -45,5 +36,6 @@
     </div>
 
     <script src="/js/alpinejs.3.13.5-min.js" defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
