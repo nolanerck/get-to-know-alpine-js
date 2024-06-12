@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Management</title>
+    <link rel="stylesheet" href="myStyles.css" />
+</head>
+<body>
+    <div x-data="{
+        guitar: 'Jason White',
+        vocals: 'Billie Joe Armstrong',
+        bass: 'Mike Dirnt',
+        drums: 'Tre Cool'
+    }">
+        <div>Guitar: <span x-text="guitar"></span></div>
+        <div>Vocals: <span x-text="vocals"></span></div>
+        <div>Bass: <span x-text="bass"></span></div>
+        <div>Drums: <span x-text="drums"></span></div>
+
+        <div x-data="{
+            bandname: 'Green Day',
+            yearFormed: '1989',
+            homeTown: 'Berkeley, CA'
+        }">
+
+            <h1>Band Details</h1>
+            <div>
+                <div>Band Name: <span x-text="bandname"></span></div>
+                <div>Formed in the year: <span x-text="yearFormed"></span></div>
+
+                <h2>Band Members</h2>
+
+                <div>
+                    <span x-text="guitar"></span>,
+                    <span x-text="vocals"></span>,
+                    <span x-text="bass"></span>, and 
+                    <span x-text="drums"></span> 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/js/alpinejs.3.13.5-min.js" defer></script>
+    <script src="app.js"></script>
+</body>
+</html>
