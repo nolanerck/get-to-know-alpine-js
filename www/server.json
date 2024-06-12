@@ -7,6 +7,6 @@
     },
     "openbrowser":"false",
     "app":{
-        "cfengine":"Adobe@2023.0.4+330500"
+        "cfengine":"Adobe@2023.0.7"
     }
 }
