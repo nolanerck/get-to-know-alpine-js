@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Data Store</title>
+    <link rel="stylesheet" href="myStyles.css" />
+</head>
+<body>
+    <h2>Loop example:</h2>
+    <div x-data>
+        <template x-for="tab in $store.tabs.items">
+            <span x-text="tab"></span>
+        </template>
+    </div>
+
+    <h2>Functionality example</h2>
+    <div x-data>
+        <button @click="$store.tabs.current = 'punk'">Punk</button>
+        <button @click="$store.tabs.current = 'metal'">Metal</button>
+        <button @click="$store.tabs.current = 'jazz'">Jazz</button>
+    </div>    
+
+    <div x-data>
+        Current tab is: <span x-text="$store.tabs.current"></span>
+    </div>
+
+    <script src="/js/alpinejs.3.13.5-min.js" defer></script>
+    <script src="app.js"></script>
+</body>
+</html>
